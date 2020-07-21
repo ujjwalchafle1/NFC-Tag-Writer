@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PBBANFCTagWriter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JeC-tI-UM5">
+                                <rect key="frame" x="8" y="90" width="338" height="32"/>
+                                <segments>
+                                    <segment title="MerchantDemo2"/>
+                                    <segment title="MerchantDemo3"/>
+                                    <segment title="MerchantDemo4"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Merchant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IP-Nc-MaR">
+                                <rect key="frame" x="8" y="61" width="131" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eTd-8h-8wR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Product Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO0-H6-e8r">
+                                <rect key="frame" x="8" y="140" width="186" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="d3n-n4-nnb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XxD-gg-kA5">
+                                <rect key="frame" x="8" y="169" width="182" height="32"/>
+                                <segments>
+                                    <segment title="100.00"/>
+                                    <segment title="200.00"/>
+                                    <segment title="300.00"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z2g-Cf-STi">
+                                <rect key="frame" x="128" y="225" width="99" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <state key="normal" title="Write Tag"/>
+                                <connections>
+                                    <action selector="writeTag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4y-HG-45p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JeC-tI-UM5" secondAttribute="trailing" symbolic="YES" id="31s-wO-KHP"/>
+                            <constraint firstItem="JeC-tI-UM5" firstAttribute="top" secondItem="4IP-Nc-MaR" secondAttribute="bottom" constant="8" id="429-k7-bzB"/>
+                            <constraint firstItem="4IP-Nc-MaR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="P5X-hX-Ym1"/>
+                            <constraint firstItem="XxD-gg-kA5" firstAttribute="top" secondItem="sO0-H6-e8r" secondAttribute="bottom" constant="8" id="Qu2-kw-wCA"/>
+                            <constraint firstItem="sO0-H6-e8r" firstAttribute="top" secondItem="JeC-tI-UM5" secondAttribute="bottom" constant="19" id="TF8-Fe-yzm"/>
+                            <constraint firstItem="sO0-H6-e8r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="XNH-4n-QCE"/>
+                            <constraint firstItem="XxD-gg-kA5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZCl-cu-TbV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4IP-Nc-MaR" secondAttribute="trailing" symbolic="YES" id="eoV-hl-SZz"/>
+                            <constraint firstItem="4IP-Nc-MaR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hyJ-dX-0ct"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XxD-gg-kA5" secondAttribute="trailing" symbolic="YES" id="ifH-u2-t7q"/>
+                            <constraint firstItem="JeC-tI-UM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="j3b-2S-klD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sO0-H6-e8r" secondAttribute="trailing" symbolic="YES" id="rXV-ze-KyN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountSegment" destination="XxD-gg-kA5" id="8dJ-BS-5LJ"/>
+                        <outlet property="merchantSegment" destination="JeC-tI-UM5" id="Lux-Ry-oYC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+</document>
